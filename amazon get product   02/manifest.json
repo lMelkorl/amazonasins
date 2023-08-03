@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Product URL Extractor",
+  "version": "1.0",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "https://www.amazon.ca/*",
+    "http://localhost:5000/api/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://www.amazon.ca/*", "http://localhost:5000/api/"],
+  "host_objects": {
+    "matches": ["https://www.amazon.ca/*"]
+  }
+}
